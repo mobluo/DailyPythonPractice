@@ -52,7 +52,7 @@ class maze:
         self.t.up()
         # setheading()设置海龟朝向，towards()从海龟位置到由(x, y)，矢量或另一海龟位置连线的夹角。此数值依赖于海龟初始朝向，由"standard"、"world"或"logo" 模式设置所决定。
         self.t.setheading(self.t.towards(x + self.xTranslate,-y + self.yTranslate))
-        self.t.goto(x + self.xTranslate,-y +self.yTranslate)
+        self.t.goto(x + self.xTranslate,-y +self.yTranslate)#坐标轴翻转、平移，左加右减，上加下减， (x-|self.xTranslate|,-(y-|self.yTranslate|))
 
     def traceDot(self,color):
         self.t.dot(color)                      # 默认size画路径原点
